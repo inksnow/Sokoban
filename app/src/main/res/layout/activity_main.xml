@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        android:elevation="6dp"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_scrollFlags="scroll|enterAlways"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg2"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <com.inks.sokoban.SokobanView
+                android:id="@+id/nnn"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+            <Button
+                android:id="@+id/back"
+                android:layout_width="60dp"
+                android:layout_centerInParent="true"
+                android:layout_height="60dp"
+                android:background="@drawable/btn_back"
+                android:layout_margin="15dp"/>
+
+            <Button
+                android:id="@+id/shang"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_above="@+id/back"
+                android:background="@drawable/btn_up"
+                android:layout_alignLeft="@+id/back"/>
+            <Button
+                android:id="@+id/xia"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/back"
+                android:background="@drawable/btn_down"
+                android:layout_alignLeft="@+id/back"/>
+            <Button
+                android:id="@+id/zuo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toLeftOf="@+id/back"
+                android:background="@drawable/btn_left"
+                android:layout_alignTop="@+id/back"/>
+            <Button
+                android:id="@+id/you"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@+id/back"
+                android:background="@drawable/btn_right"
+                android:layout_alignTop="@+id/back"/>
+
+            <Button
+                android:id="@+id/shangyi"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/btn_last"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:text="上一关"/>
+
+            <Button
+                android:id="@+id/xiayi"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/btn_next"
+                android:layout_alignParentRight="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:textColor="#ffffff"
+                android:text="下一关"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
